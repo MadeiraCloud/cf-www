@@ -56,7 +56,7 @@ a {
 .container {
 	max-width: 1024px;
 	margin: 0 auto;
-	padding: 40px 40px;
+	padding: 40px;
 	header {
 		overflow: auto;
 		color: white;
@@ -105,15 +105,16 @@ a {
 		margin-top: 180px;
 		text-align: center;
 		.logo {
-			width: 320px;
+			max-width: 320px;
+			width: 100%;
 			margin: 0 auto;
 			display: block;
 		}
 		.subtitle {
-			font-size: 22px;
+			font-size: 20px;
 			margin-top: 20px;
-			font-family: RobotoSlab-Light;
-			color: #797979;
+			font-family: RobotoSlab-Regular;
+			color: #747474;
 		}
 		.code {
 			font-size: 16px;
@@ -124,13 +125,13 @@ a {
 			border: 3px #212f38 solid;
 			max-width: 650px;
 			.res {
-				color: #707071; 
+				color: #707071;
 			}
 			.attr {
 				color: #a97d0d;
 			}
 			.val {
-				color: #0a722a; 
+				color: #0a722a;
 			}
 			.act {
 				color: #515fcb;
@@ -139,10 +140,12 @@ a {
 	}
 	.intro-list {
 		text-align: center;
+		margin: 0 auto;
 		margin-top: 50px;
+		max-width: 600px;
 		.intro {
 			.img {
-				max-width: 600px;
+				width: 100%;
 				border: 3px #0f1f29 solid;
 			}
 			.title {
@@ -217,7 +220,7 @@ a {
 	}
 	.last {
 		text-align: center;
-		margin: 150px;
+		margin: 150px 0;
 		.signup {
 			font-size: 14px;
 			display: block;
@@ -255,6 +258,51 @@ a {
 			.bg-size(180px);
 			float: right;
 			margin-top: -32px;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.container {
+		padding: 40px 20px;
+		header {
+			nav {
+				float: none;
+				margin-top: 30px;
+				.sign {
+					display: block;
+				}
+			}
+			.logo, .vo-logo {
+				float: none;
+			}
+			.item {
+				margin: 0 auto;
+				text-align: center;
+				display: block;
+			}
+		}
+		.title {
+			margin-top: 60px;
+		}
+		.intro-list {
+			.intro {
+				.title {
+					margin-top: 120px;
+				}
+			}
+		}
+		footer {
+			.copyright {
+				float: none;
+				width: 100%;
+				text-align: center;
+			}
+			.vo-logo {
+				float: none;
+				margin: 0 auto;
+				text-align: center;
+			}
 		}
 	}
 }
