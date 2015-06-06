@@ -36,6 +36,7 @@ ul {
 a {
 	color: @font-color;
 	cursor: pointer;
+	text-decoration: none;
 	&:hover {
 		opacity: 0.95;
 	}
@@ -189,55 +190,50 @@ a {
 			}
 			span {
 				position: relative;
-				&.green {
+				&.normal {
+					z-index: 2;
+				}
+				&.light {
 					z-index: 0;
 					&::before {
 						content: "";
 						position: absolute;
+						z-index: -1;
+					}
+				}
+				&.green {
+					&::before {
 						width: 154px;
 						height: 40px;
 						left: -11px;
 						top: 1px;
-						z-index: -1;
 						background: url("images/green.png") no-repeat;
 					}
 				}
 				&.purple {
-					z-index: 0;
 					&::before {
-						content: "";
-						position: absolute;
 						width: 100px;
 						height: 40px;
 						left: -6px;
 						top: 1px;
-						z-index: -1;
 						background: url("images/purple.png") no-repeat;
 					}
 				}
 				&.red {
-					z-index: 0;
 					&::before {
-						content: "";
-						position: absolute;
 						width: 82px;
 						height: 40px;
 						left: -18px;
 						top: 1px;
-						z-index: -1;
 						background: url("images/red.png") no-repeat;
 					}
 				}
 				&.orange {
-					z-index: 0;
 					&::before {
-						content: "";
-						position: absolute;
 						width: 110px;
 						height: 40px;
 						left: -11px;
 						top: -2px;
-						z-index: -1;
 						background: url("images/orange.png") no-repeat;
 					}
 				}
