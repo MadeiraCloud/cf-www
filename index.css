@@ -5,13 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'RobotoSlab-Light';
-  src: url('fonts/RobotoSlab-Light.eot');
-  src: url('fonts/RobotoSlab-Light.eot?#iefix') format('embedded-opentype'), url('fonts/RobotoSlab-Light.woff2') format('woff2'), url('fonts/RobotoSlab-Light.woff') format('woff'), url('fonts/RobotoSlab-Light.ttf') format('truetype'), url('fonts/RobotoSlab-Light.svg#RobotoSlab-Light') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 html,
 body {
   margin: 0;
@@ -123,6 +116,61 @@ a:hover {
 }
 .container .title .code .act {
   color: #515fcb;
+}
+.container .title .code #typing {
+  width: 15px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: width 4s steps(45, end);
+  -moz-transition: width 4s steps(45, end);
+  -ms-transition: width 4s steps(45, end);
+  -o-transition: width 4s steps(45, end);
+  transition: width 4s steps(45, end);
+}
+.container .title .code #typing.active {
+  width: 90%;
+  max-width: 425px;
+}
+@-moz-keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@-webkit-keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+.container .title .code #cursor.active {
+  -webkit-animation: blinker linear 1s infinite;
+  -moz-animation: blinker linear 1s infinite;
+  -ms-animation: blinker linear 1s infinite;
+  -o-animation: blinker linear 1s infinite;
+  animation: blinker linear 1s infinite;
 }
 .container .intro-list {
   text-align: center;
